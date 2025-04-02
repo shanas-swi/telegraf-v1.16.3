@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/ericchiang/k8s/apis/apps/v1"
+	v1 "github.com/ericchiang/k8s/apis/apps/v1"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 func collectDaemonSets(ctx context.Context, acc telegraf.Accumulator, ki *KubernetesInventory) {

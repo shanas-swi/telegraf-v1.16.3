@@ -4,14 +4,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/parsers"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
-//compares metrics without comparing time
+// compares metrics without comparing time
 func compareMetrics(t *testing.T, expected, actual []telegraf.Metric) {
 	assert.Equal(t, len(expected), len(actual))
 	for i, metric := range actual {

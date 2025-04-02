@@ -9,9 +9,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/filter"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 type mockGatherCloudWatchClient struct{}

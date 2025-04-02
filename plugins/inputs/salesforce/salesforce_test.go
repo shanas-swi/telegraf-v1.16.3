@@ -6,8 +6,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/influxdata/telegraf/plugins/inputs/salesforce"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/salesforce"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/require"
 )
 

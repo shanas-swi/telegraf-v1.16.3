@@ -2,11 +2,12 @@ package pgbouncer
 
 import (
 	"fmt"
-	"github.com/influxdata/telegraf/plugins/inputs/postgresql"
-	"github.com/influxdata/telegraf/testutil"
+	"testing"
+
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/postgresql"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestPgBouncerGeneratesMetrics(t *testing.T) {

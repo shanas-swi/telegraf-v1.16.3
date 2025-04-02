@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/serializers/carbon2"
-	"github.com/influxdata/telegraf/plugins/serializers/graphite"
-	"github.com/influxdata/telegraf/plugins/serializers/influx"
-	"github.com/influxdata/telegraf/plugins/serializers/json"
-	"github.com/influxdata/telegraf/plugins/serializers/nowmetric"
-	"github.com/influxdata/telegraf/plugins/serializers/prometheus"
-	"github.com/influxdata/telegraf/plugins/serializers/splunkmetric"
-	"github.com/influxdata/telegraf/plugins/serializers/wavefront"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/carbon2"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/graphite"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/influx"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/json"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/nowmetric"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/prometheus"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/splunkmetric"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/wavefront"
 )
 
 // SerializerOutput is an interface for output plugins that are able to

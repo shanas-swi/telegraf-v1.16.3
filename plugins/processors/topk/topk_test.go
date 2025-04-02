@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 // Key, value pair that represents a telegraf.Metric Field
@@ -42,11 +42,12 @@ type metricChange struct {
 // Generate a new set of metrics from a set of changes. This is used to generate an answer which will be
 // compare against the output of the processor
 // NOTE: A `changeSet` is a map where the keys are the indices of the metrics to keep, and the values
-//       are list of new tags and fields to be added to the metric in that index.
-//       THE ORDERING OF THE NEW TAGS AND FIELDS MATTERS. When using reflect.DeepEqual to compare metrics,
-//       comparing metrics that have the same fields/tags added in different orders will return false, although
-//       they are semantically equal.
-//       Therefore the fields and tags must be in the same order that the processor would add them
+//
+//	are list of new tags and fields to be added to the metric in that index.
+//	THE ORDERING OF THE NEW TAGS AND FIELDS MATTERS. When using reflect.DeepEqual to compare metrics,
+//	comparing metrics that have the same fields/tags added in different orders will return false, although
+//	they are semantically equal.
+//	Therefore the fields and tags must be in the same order that the processor would add them
 func generateAns(input []telegraf.Metric, changeSet map[int]metricChange) []telegraf.Metric {
 	answer := []telegraf.Metric{}
 

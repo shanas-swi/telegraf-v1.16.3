@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/assert"
 	_ "github.com/stretchr/testify/require"
 )
@@ -139,11 +139,13 @@ func (c jolokiaClientStub) MakeRequest(req *http.Request) (*http.Response, error
 
 // Generates a pointer to an HttpJson object that uses a mock HTTP client.
 // Parameters:
-//     response  : Body of the response that the mock HTTP client should return
-//     statusCode: HTTP status code the mock HTTP client should return
+//
+//	response  : Body of the response that the mock HTTP client should return
+//	statusCode: HTTP status code the mock HTTP client should return
 //
 // Returns:
-//     *HttpJson: Pointer to an HttpJson object that uses the generated mock HTTP client
+//
+//	*HttpJson: Pointer to an HttpJson object that uses the generated mock HTTP client
 func genJolokiaClientStub(response string, statusCode int, servers []Server, metrics []Metric) *Jolokia {
 	return &Jolokia{
 		jClient:   jolokiaClientStub{responseBody: response, statusCode: statusCode},

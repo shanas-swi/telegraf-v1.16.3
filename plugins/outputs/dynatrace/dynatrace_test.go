@@ -2,16 +2,17 @@ package dynatrace
 
 import (
 	"encoding/json"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/testutil"
-	"github.com/stretchr/testify/require"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 	"time"
+
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
+	"github.com/stretchr/testify/require"
 )
 
 func TestNilMetrics(t *testing.T) {

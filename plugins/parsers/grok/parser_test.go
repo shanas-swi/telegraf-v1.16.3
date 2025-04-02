@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -1096,7 +1096,7 @@ func TestEmptyYearInTimestamp(t *testing.T) {
 }
 
 func TestTrimRegression(t *testing.T) {
-	// https://github.com/influxdata/telegraf/issues/4998
+	// https://github.com/shanas-swi/telegraf-v1.16.3/issues/4998
 	p := &Parser{
 		Patterns: []string{`%{GREEDYDATA:message:string}`},
 	}

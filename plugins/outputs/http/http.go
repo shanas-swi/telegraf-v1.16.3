@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
 )
@@ -53,7 +53,7 @@ var sampleConfig = `
   ## Data format to output.
   ## Each data format has it's own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md
+  ## https://github.com/shanas-swi/telegraf-v1.16.3/blob/master/docs/DATA_FORMATS_OUTPUT.md
   # data_format = "influx"
 
   ## HTTP Content-Encoding for write request body, can be set to "gzip" to

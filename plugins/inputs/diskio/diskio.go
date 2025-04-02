@@ -5,10 +5,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/inputs/system"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/filter"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/system"
 )
 
 var (

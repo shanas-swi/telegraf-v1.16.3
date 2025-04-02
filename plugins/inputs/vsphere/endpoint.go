@@ -14,9 +14,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/influxdata/telegraf/filter"
+	"github.com/shanas-swi/telegraf-v1.16.3/filter"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/performance"
 	"github.com/vmware/govmomi/vim25/mo"
@@ -660,7 +660,7 @@ func getClusters(ctx context.Context, e *Endpoint, filter *ResourceFilter) (obje
 	return m, nil
 }
 
-//noinspection GoUnusedParameter
+// noinspection GoUnusedParameter
 func getHosts(ctx context.Context, e *Endpoint, filter *ResourceFilter) (objectMap, error) {
 	var resources []mo.HostSystem
 	err := filter.FindAll(ctx, &resources)

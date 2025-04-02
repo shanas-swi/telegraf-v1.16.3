@@ -8,9 +8,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	plugin "github.com/influxdata/telegraf/plugins/inputs/http"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/testutil"
+	plugin "github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/http"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/require"
 )
 

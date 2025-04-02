@@ -3,9 +3,10 @@ package teamspeak
 import (
 	"github.com/multiplay/go-ts3"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
 	"strconv"
+
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 type Teamspeak struct {

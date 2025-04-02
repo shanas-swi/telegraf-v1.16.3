@@ -4,8 +4,8 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/influxdata/telegraf"
 	dto "github.com/prometheus/client_model/go"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 type Table struct {

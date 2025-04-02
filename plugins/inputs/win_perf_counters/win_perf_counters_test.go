@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 package win_perf_counters
@@ -8,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -712,7 +713,7 @@ func TestGatherInvalidDataIgnore(t *testing.T) {
 	acc1.AssertContainsTaggedFields(t, measurement, fields1, tags1)
 }
 
-//tests with expansion
+// tests with expansion
 func TestGatherRefreshingWithExpansion(t *testing.T) {
 	var err error
 	if testing.Short() {

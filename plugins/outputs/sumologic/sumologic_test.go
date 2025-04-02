@@ -17,13 +17,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/serializers/carbon2"
-	"github.com/influxdata/telegraf/plugins/serializers/graphite"
-	"github.com/influxdata/telegraf/plugins/serializers/prometheus"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/carbon2"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/graphite"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/prometheus"
 )
 
 func getMetric(t *testing.T) telegraf.Metric {

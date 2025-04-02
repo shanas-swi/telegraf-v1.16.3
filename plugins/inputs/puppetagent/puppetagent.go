@@ -2,14 +2,15 @@ package puppetagent
 
 import (
 	"fmt"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
 	"reflect"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"gopkg.in/yaml.v2"
+
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 // PuppetAgent is a PuppetAgent plugin

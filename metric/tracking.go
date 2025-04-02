@@ -5,7 +5,7 @@ import (
 	"runtime"
 	"sync/atomic"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 // NotifyFunc is called when a tracking metric is done being processed with

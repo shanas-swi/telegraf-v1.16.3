@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 package intel_rdt
@@ -17,9 +18,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal/choice"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal/choice"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 const (

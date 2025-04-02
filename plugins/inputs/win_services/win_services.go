@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 package win_services
@@ -6,8 +7,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 	"golang.org/x/sys/windows/svc"
 	"golang.org/x/sys/windows/svc/mgr"
 )
@@ -87,7 +88,7 @@ var sampleConfig = `
 
 var description = "Input plugin to report Windows services info."
 
-//WinServices is an implementation if telegraf.Input interface, providing info about Windows Services
+// WinServices is an implementation if telegraf.Input interface, providing info about Windows Services
 type WinServices struct {
 	Log telegraf.Logger
 

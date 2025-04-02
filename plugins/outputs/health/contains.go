@@ -1,6 +1,6 @@
 package health
 
-import "github.com/influxdata/telegraf"
+import "github.com/shanas-swi/telegraf-v1.16.3"
 
 type Contains struct {
 	Field string `toml:"field"`

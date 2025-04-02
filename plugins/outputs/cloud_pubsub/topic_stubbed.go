@@ -12,10 +12,10 @@ import (
 	"encoding/base64"
 
 	"cloud.google.com/go/pubsub"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
 	"google.golang.org/api/support/bundler"
 )
 

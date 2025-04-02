@@ -3,11 +3,11 @@ package codec
 import (
 	"time"
 
-	"github.com/influxdata/telegraf/plugins/inputs/zipkin/trace"
 	"github.com/openzipkin/zipkin-go-opentracing/thrift/gen-go/zipkincore"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/zipkin/trace"
 )
 
-//now is a mockable time for now
+// now is a mockable time for now
 var now = time.Now
 
 // DefaultServiceName when the span does not have any serviceName

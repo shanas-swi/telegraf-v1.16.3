@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/filter"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 type runner func(cmdName string, Timeout internal.Duration, UseSudo bool, Server string, ThreadAsTag bool, ConfigFile string) (*bytes.Buffer, error)

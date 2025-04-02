@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 package main
@@ -7,8 +8,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/influxdata/telegraf/logger"
 	"github.com/kardianos/service"
+	"github.com/shanas-swi/telegraf-v1.16.3/logger"
 )
 
 func run(inputFilters, outputFilters, aggregatorFilters, processorFilters []string) {

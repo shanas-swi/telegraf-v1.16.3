@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/docker/docker/api/types"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs/docker"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/docker"
 )
 
 func parseContainerStats(c Container, acc telegraf.Accumulator, tags map[string]string) {

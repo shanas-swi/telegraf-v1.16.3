@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package iptables
@@ -9,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 // Iptables is a telegraf plugin to gather packets and bytes throughput from Linux's iptables packet filter.

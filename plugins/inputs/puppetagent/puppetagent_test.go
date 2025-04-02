@@ -1,8 +1,9 @@
 package puppetagent
 
 import (
-	"github.com/influxdata/telegraf/testutil"
 	"testing"
+
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 func TestGather(t *testing.T) {

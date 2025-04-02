@@ -9,7 +9,7 @@ import (
 	// TODO: import your plugins
 	// _ "github.com/my_github_user/my_plugin_repo/plugins/inputs/mypluginname"
 
-	"github.com/influxdata/telegraf/plugins/common/shim"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/common/shim"
 )
 
 var pollInterval = flag.Duration("poll_interval", 1*time.Second, "how often to send metrics")
@@ -22,16 +22,16 @@ var err error
 // However, if you want to do all your config in code, you can like so:
 //
 // // initialize your plugin with any settngs you want
-// myInput := &mypluginname.MyPlugin{
-// 	DefaultSettingHere: 3,
-// }
+//
+//	myInput := &mypluginname.MyPlugin{
+//		DefaultSettingHere: 3,
+//	}
 //
 // shim := shim.New()
 //
 // shim.AddInput(myInput)
 //
 // // now the shim.Run() call as below.
-//
 func main() {
 	// parse command line options
 	flag.Parse()

@@ -16,11 +16,11 @@ import (
 	"github.com/influxdata/go-syslog/v2/nontransparent"
 	"github.com/influxdata/go-syslog/v2/octetcounting"
 	"github.com/influxdata/go-syslog/v2/rfc5424"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	framing "github.com/influxdata/telegraf/internal/syslog"
-	tlsConfig "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	framing "github.com/shanas-swi/telegraf-v1.16.3/internal/syslog"
+	tlsConfig "github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 const defaultReadTimeout = time.Second * 5

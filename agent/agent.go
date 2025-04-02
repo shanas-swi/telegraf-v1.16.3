@@ -10,11 +10,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/models"
-	"github.com/influxdata/telegraf/plugins/serializers/influx"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/models"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/influx"
 )
 
 // Agent runs a set of plugins.
@@ -46,9 +46,11 @@ type inputUnit struct {
 	inputs []*models.RunningInput
 }
 
-//  ______     ┌───────────┐     ______
+//	______     ┌───────────┐     ______
+//
 // ()_____)──▶ │ Processor │──▶ ()_____)
-//             └───────────┘
+//
+//	└───────────┘
 type processorUnit struct {
 	src       <-chan telegraf.Metric
 	dst       chan<- telegraf.Metric
@@ -59,17 +61,19 @@ type processorUnit struct {
 // Typically the aggregators write to a processor channel and pass the original
 // metrics to the output channel.  The sink channels may be the same channel.
 //
-//                 ┌────────────┐
-//            ┌──▶ │ Aggregator │───┐
-//            │    └────────────┘   │
-//  ______    │    ┌────────────┐   │     ______
+//	               ┌────────────┐
+//	          ┌──▶ │ Aggregator │───┐
+//	          │    └────────────┘   │
+//	______    │    ┌────────────┐   │     ______
+//
 // ()_____)───┼──▶ │ Aggregator │───┼──▶ ()_____)
-//            │    └────────────┘   │
-//            │    ┌────────────┐   │
-//            ├──▶ │ Aggregator │───┘
-//            │    └────────────┘
-//            │                           ______
-//            └────────────────────────▶ ()_____)
+//
+//	│    └────────────┘   │
+//	│    ┌────────────┐   │
+//	├──▶ │ Aggregator │───┘
+//	│    └────────────┘
+//	│                           ______
+//	└────────────────────────▶ ()_____)
 type aggregatorUnit struct {
 	src         <-chan telegraf.Metric
 	aggC        chan<- telegraf.Metric
@@ -80,15 +84,17 @@ type aggregatorUnit struct {
 // outputUnit is a group of Outputs and their source channel.  Metrics on the
 // channel are written to all outputs.
 //
-//                            ┌────────┐
-//                       ┌──▶ │ Output │
-//                       │    └────────┘
-//  ______     ┌─────┐   │    ┌────────┐
+//	                          ┌────────┐
+//	                     ┌──▶ │ Output │
+//	                     │    └────────┘
+//	______     ┌─────┐   │    ┌────────┐
+//
 // ()_____)──▶ │ Fan │───┼──▶ │ Output │
-//             └─────┘   │    └────────┘
-//                       │    ┌────────┐
-//                       └──▶ │ Output │
-//                            └────────┘
+//
+//	└─────┘   │    └────────┘
+//	          │    ┌────────┐
+//	          └──▶ │ Output │
+//	               └────────┘
 type outputUnit struct {
 	src     <-chan telegraf.Metric
 	outputs []*models.RunningOutput
@@ -1140,6 +1146,6 @@ func panicRecover(input *models.RunningInput) {
 			input.LogName(), err, trace)
 		log.Println("E! PLEASE REPORT THIS PANIC ON GITHUB with " +
 			"stack trace, configuration, and OS information: " +
-			"https://github.com/influxdata/telegraf/issues/new/choose")
+			"https://github.com/shanas-swi/telegraf-v1.16.3/issues/new/choose")
 	}
 }

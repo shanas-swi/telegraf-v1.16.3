@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/Shopify/sarama"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/require"
 )
 

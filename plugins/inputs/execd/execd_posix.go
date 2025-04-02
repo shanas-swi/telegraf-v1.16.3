@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 package execd
@@ -9,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 func (e *Execd) Gather(acc telegraf.Accumulator) error {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"sync"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/parsers"
 	nsq "github.com/nsqio/go-nsq"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers"
 )
 
 const (
@@ -26,7 +26,7 @@ func (l *logger) Output(calldepth int, s string) error {
 	return nil
 }
 
-//NSQConsumer represents the configuration of the plugin
+// NSQConsumer represents the configuration of the plugin
 type NSQConsumer struct {
 	Server      string   `toml:"server"`
 	Nsqd        []string `toml:"nsqd"`
@@ -74,7 +74,7 @@ var sampleConfig = `
   ## Data format to consume.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
+  ## https://github.com/shanas-swi/telegraf-v1.16.3/blob/master/docs/DATA_FORMATS_INPUT.md
   data_format = "influx"
 `
 

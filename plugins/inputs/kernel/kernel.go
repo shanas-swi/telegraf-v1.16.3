@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package kernel
@@ -10,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 // /proc/stat file line prefixes to gather stats on:

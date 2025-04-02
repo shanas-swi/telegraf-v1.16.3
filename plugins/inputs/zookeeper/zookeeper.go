@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	tlsint "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	tlsint "github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 var zookeeperFormatRE = regexp.MustCompile(`^zk_(\w+)\s+([\w\.\-]+)`)

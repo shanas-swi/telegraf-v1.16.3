@@ -1,8 +1,8 @@
 package processors
 
 import (
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/models"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/models"
 )
 
 // NewStreamingProcessorFromProcessor is a converter that turns a standard

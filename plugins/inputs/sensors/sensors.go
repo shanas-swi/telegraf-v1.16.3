@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package sensors
@@ -11,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 var (
@@ -53,7 +54,9 @@ func (s *Sensors) Gather(acc telegraf.Accumulator) error {
 }
 
 // parse forks the command:
-//     sensors -u -A
+//
+//	sensors -u -A
+//
 // and parses the output to add it to the telegraf.Accumulator.
 func (s *Sensors) parse(acc telegraf.Accumulator) error {
 	tags := map[string]string{}

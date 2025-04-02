@@ -1,12 +1,13 @@
+//go:build windows
 // +build windows
 
-//these tests must be run under administrator account
+// these tests must be run under administrator account
 package win_services
 
 import (
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/require"
 )
 

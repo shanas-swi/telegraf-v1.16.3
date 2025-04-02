@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package cgroup
@@ -11,7 +12,7 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 const metricName = "cgroup"

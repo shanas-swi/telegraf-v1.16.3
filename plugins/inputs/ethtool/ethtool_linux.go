@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package ethtool
@@ -6,11 +7,11 @@ import (
 	"net"
 	"sync"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/plugins/inputs"
 	"github.com/pkg/errors"
 	"github.com/safchain/ethtool"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/filter"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 type CommandEthtool struct {

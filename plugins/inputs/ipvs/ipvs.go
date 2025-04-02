@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package ipvs
@@ -9,9 +10,9 @@ import (
 	"syscall"
 
 	"github.com/docker/libnetwork/ipvs"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/common/logrus"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/common/logrus"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 // IPVS holds the state for this input plugin

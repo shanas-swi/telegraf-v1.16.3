@@ -4,8 +4,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/processors"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/processors"
 )
 
 type TemplateProcessor struct {

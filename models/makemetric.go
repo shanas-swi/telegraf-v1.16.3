@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 // Makemetric applies new metric plugin and agent measurement and tag

@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package sensors
@@ -8,7 +9,7 @@ import (
 	"os/exec"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 func TestGatherDefault(t *testing.T) {

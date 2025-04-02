@@ -4,10 +4,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	inter "github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	inter "github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/selfstat"
 )
 
 type Self struct {

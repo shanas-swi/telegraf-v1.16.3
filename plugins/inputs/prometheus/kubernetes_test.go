@@ -1,10 +1,11 @@
 package prometheus
 
 import (
-	"github.com/ericchiang/k8s"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/ericchiang/k8s"
+
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/assert"
 
 	v1 "github.com/ericchiang/k8s/apis/core/v1"

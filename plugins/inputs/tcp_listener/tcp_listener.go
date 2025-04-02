@@ -7,11 +7,11 @@ import (
 	"net"
 	"sync"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers"
+	"github.com/shanas-swi/telegraf-v1.16.3/selfstat"
 )
 
 type TcpListener struct {
@@ -62,7 +62,7 @@ var malformedwarn = "tcp_listener has received %d malformed packets" +
 const sampleConfig = `
   # DEPRECATED: the TCP listener plugin has been deprecated in favor of the
   # socket_listener plugin
-  # see https://github.com/influxdata/telegraf/tree/master/plugins/inputs/socket_listener
+  # see https://github.com/shanas-swi/telegraf-v1.16.3/tree/master/plugins/inputs/socket_listener
 `
 
 func (t *TcpListener) SampleConfig() string {
@@ -90,7 +90,7 @@ func (t *TcpListener) Start(acc telegraf.Accumulator) error {
 
 	log.Println("W! DEPRECATED: the TCP listener plugin has been deprecated " +
 		"in favor of the socket_listener plugin " +
-		"(https://github.com/influxdata/telegraf/tree/master/plugins/inputs/socket_listener)")
+		"(https://github.com/shanas-swi/telegraf-v1.16.3/tree/master/plugins/inputs/socket_listener)")
 
 	tags := map[string]string{
 		"address": t.ServiceAddress,

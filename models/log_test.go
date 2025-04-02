@@ -3,7 +3,7 @@ package models
 import (
 	"testing"
 
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/shanas-swi/telegraf-v1.16.3/selfstat"
 	"github.com/stretchr/testify/require"
 )
 

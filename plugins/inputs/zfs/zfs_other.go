@@ -1,10 +1,11 @@
+//go:build !linux && !freebsd
 // +build !linux,!freebsd
 
 package zfs
 
 import (
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 func (z *Zfs) Gather(acc telegraf.Accumulator) error {

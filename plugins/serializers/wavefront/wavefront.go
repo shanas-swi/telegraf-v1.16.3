@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/outputs/wavefront"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs/wavefront"
 )
 
 // WavefrontSerializer : WavefrontSerializer struct
@@ -203,8 +203,7 @@ func (b *buffer) WriteString(s string) {
 // This is named WriteChar instead of WriteByte because the 'stdmethods' check
 // of 'go vet' wants WriteByte to have the signature:
 //
-// 	func (b *buffer) WriteByte(c byte) error { ... }
-//
+//	func (b *buffer) WriteByte(c byte) error { ... }
 func (b *buffer) WriteChar(c byte) {
 	*b = append(*b, c)
 }

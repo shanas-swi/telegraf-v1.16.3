@@ -7,10 +7,10 @@ import (
 
 	"github.com/Microsoft/ApplicationInsights-Go/appinsights"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/outputs/application_insights/mocks"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs/application_insights/mocks"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

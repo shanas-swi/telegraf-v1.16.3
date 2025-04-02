@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 // Measurement is constant across all metrics.
@@ -101,7 +101,7 @@ func (n *NeptuneApex) gatherServer(
 }
 
 // parseXML is strict on the input and does not do best-effort parsing.
-//This is because of the life-support nature of the Neptune Apex.
+// This is because of the life-support nature of the Neptune Apex.
 func (n *NeptuneApex) parseXML(acc telegraf.Accumulator, data []byte) error {
 	r := xmlReply{}
 	err := xml.Unmarshal(data, &r)

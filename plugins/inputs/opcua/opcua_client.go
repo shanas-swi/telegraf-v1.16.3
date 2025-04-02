@@ -10,9 +10,9 @@ import (
 
 	"github.com/gopcua/opcua"
 	"github.com/gopcua/opcua/ua"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 // OpcUA type
@@ -196,7 +196,7 @@ func (o *OpcUA) validateEndpoint() error {
 	return nil
 }
 
-//InitNodes Method on OpcUA
+// InitNodes Method on OpcUA
 func (o *OpcUA) InitNodes() error {
 	if len(o.NodeList) == 0 {
 		return nil

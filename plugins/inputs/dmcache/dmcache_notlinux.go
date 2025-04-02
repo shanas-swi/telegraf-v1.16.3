@@ -1,9 +1,10 @@
+//go:build !linux
 // +build !linux
 
 package dmcache
 
 import (
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 func (c *DMCache) Gather(acc telegraf.Accumulator) error {

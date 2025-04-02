@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 	"go.starlark.net/starlark"
 )
 

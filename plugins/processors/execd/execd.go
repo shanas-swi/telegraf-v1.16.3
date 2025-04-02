@@ -8,12 +8,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal/process"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/plugins/processors"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal/process"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/processors"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
 )
 
 const sampleConfig = `

@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 package intel_rdt
@@ -7,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 // Publisher for publish new RDT metrics to telegraf accumulator

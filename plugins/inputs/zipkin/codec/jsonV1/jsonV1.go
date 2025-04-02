@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/influxdata/telegraf/plugins/inputs/zipkin/codec"
 	"github.com/openzipkin/zipkin-go-opentracing/thrift/gen-go/zipkincore"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/zipkin/codec"
 )
 
 // JSON decodes spans from  bodies `POST`ed to the spans endpoint

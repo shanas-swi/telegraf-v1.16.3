@@ -12,12 +12,12 @@ import (
 	monitoring "cloud.google.com/go/monitoring/apiv3"
 	googlepbduration "github.com/golang/protobuf/ptypes/duration"
 	googlepbts "github.com/golang/protobuf/ptypes/timestamp"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/internal/limiter"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/inputs" // Imports the Stackdriver Monitoring client package.
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal/limiter"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs" // Imports the Stackdriver Monitoring client package.
+	"github.com/shanas-swi/telegraf-v1.16.3/selfstat"
 	"google.golang.org/api/iterator"
 	distributionpb "google.golang.org/genproto/googleapis/api/distribution"
 	metricpb "google.golang.org/genproto/googleapis/api/metric"

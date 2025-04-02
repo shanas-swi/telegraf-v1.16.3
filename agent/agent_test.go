@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/config"
-	_ "github.com/influxdata/telegraf/plugins/inputs/all"
-	_ "github.com/influxdata/telegraf/plugins/outputs/all"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	_ "github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/all"
+	_ "github.com/shanas-swi/telegraf-v1.16.3-v1.16.3/plugins/outputs/all"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

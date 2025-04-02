@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package dmcache
@@ -9,7 +10,7 @@ import (
 
 	"errors"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 const metricName = "dmcache"

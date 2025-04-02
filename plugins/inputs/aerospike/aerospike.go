@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	tlsint "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	tlsint "github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 
 	as "github.com/aerospike/aerospike-client-go"
 )

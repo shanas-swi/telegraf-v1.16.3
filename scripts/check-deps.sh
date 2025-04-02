@@ -26,7 +26,7 @@ done
 for dep in $(LC_ALL=C sort -u "${tmpdir}/golist"); do
 	case "${dep}" in
 		# ignore ourselves
-		github.com/influxdata/telegraf) continue;;
+		github.com/shanas-swi/telegraf-v1.16.3) continue;;
 
 		# dependency is replaced in go.mod
 		github.com/satori/go.uuid) continue;;

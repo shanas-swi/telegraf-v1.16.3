@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/influxdata/telegraf/plugins/inputs/zipkin/codec"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/zipkin/codec"
 
 	"github.com/apache/thrift/lib/go/thrift"
 	"github.com/openzipkin/zipkin-go-opentracing/thrift/gen-go/zipkincore"

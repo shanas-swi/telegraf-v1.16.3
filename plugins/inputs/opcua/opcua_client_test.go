@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
 	"github.com/stretchr/testify/require"
 )
 

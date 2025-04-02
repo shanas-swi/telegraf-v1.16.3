@@ -1,3 +1,4 @@
+//go:build !windows
 // +build !windows
 
 package processes
@@ -8,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -17,8 +18,8 @@ import (
 func TestProcesses(t *testing.T) {
 	tester := tester{}
 	processes := &Processes{
-		Log: testutil.Logger{},
-		execPS: testExecPS("STAT\n		Ss  \n		S   \n		Z   \n		R   \n		S<  \n		SNs \n		Ss+ \n		\n		\n"),
+		Log:          testutil.Logger{},
+		execPS:       testExecPS("STAT\n		Ss  \n		S   \n		Z   \n		R   \n		S<  \n		SNs \n		Ss+ \n		\n		\n"),
 		readProcFile: tester.testProcFile,
 	}
 	var acc testutil.Accumulator

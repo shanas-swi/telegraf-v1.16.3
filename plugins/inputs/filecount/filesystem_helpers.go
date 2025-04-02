@@ -34,7 +34,7 @@ func (osFS) Stat(name string) (os.FileInfo, error) { return os.Stat(name) }
 
 /*
 	The following are for mocking the filesystem - this allows us to mock Stat() files. This means that we can set file attributes, and know that they
-	will be the same regardless of the platform sitting underneath our tests (directory sizes vary see https://github.com/influxdata/telegraf/issues/6011)
+	will be the same regardless of the platform sitting underneath our tests (directory sizes vary see https://github.com/shanas-swi/telegraf-v1.16.3/issues/6011)
 
 	NOTE: still need the on-disk file structure to mirror this because the 3rd party library ("github.com/karrick/godirwalk") uses its own
 	walk functions, that we cannot mock from here.

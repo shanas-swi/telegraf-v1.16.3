@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/influxdata/telegraf"
 	dto "github.com/prometheus/client_model/go"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 const helpString = "Telegraf collected metric"

@@ -13,11 +13,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/internal/snmp"
-	"github.com/influxdata/telegraf/plugins/inputs"
 	"github.com/influxdata/wlog"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal/snmp"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 	"github.com/soniah/gosnmp"
 )
 
@@ -561,12 +561,13 @@ func (s *Snmp) getConnection(idx int) (snmpConnection, error) {
 }
 
 // fieldConvert converts from any type according to the conv specification
-//  "float"/"float(0)" will convert the value into a float.
-//  "float(X)" will convert the value into a float, and then move the decimal before Xth right-most digit.
-//  "int" will convert the value into an integer.
-//  "hwaddr" will convert the value into a MAC address.
-//  "ipaddr" will convert the value into into an IP address.
-//  "" will convert a byte slice into a string.
+//
+//	"float"/"float(0)" will convert the value into a float.
+//	"float(X)" will convert the value into a float, and then move the decimal before Xth right-most digit.
+//	"int" will convert the value into an integer.
+//	"hwaddr" will convert the value into a MAC address.
+//	"ipaddr" will convert the value into into an IP address.
+//	"" will convert a byte slice into a string.
 func fieldConvert(conv string, v interface{}) (interface{}, error) {
 	if conv == "" {
 		if bs, ok := v.([]byte); ok {

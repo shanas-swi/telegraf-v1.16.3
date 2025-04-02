@@ -3,17 +3,18 @@ package postgresql
 import (
 	"database/sql"
 	"fmt"
-	"github.com/jackc/pgx"
-	"github.com/jackc/pgx/pgtype"
-	"github.com/jackc/pgx/stdlib"
 	"net"
 	"net/url"
 	"regexp"
 	"sort"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
+	"github.com/jackc/pgx"
+	"github.com/jackc/pgx/pgtype"
+	"github.com/jackc/pgx/stdlib"
+
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
 )
 
 // pulled from lib/pq
@@ -107,7 +108,7 @@ func (p *Service) Start(telegraf.Accumulator) (err error) {
 	connectionString := p.Address
 
 	// Specific support to make it work with PgBouncer too
-	// See https://github.com/influxdata/telegraf/issues/3253#issuecomment-357505343
+	// See https://github.com/shanas-swi/telegraf-v1.16.3/issues/3253#issuecomment-357505343
 	if p.IsPgBouncer {
 		d := &stdlib.DriverConfig{
 			ConnConfig: pgx.ConnConfig{

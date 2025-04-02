@@ -10,14 +10,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	tlsint "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/outputs/prometheus_client/v1"
-	"github.com/influxdata/telegraf/plugins/outputs/prometheus_client/v2"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	tlsint "github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	v1 "github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs/prometheus_client/v1"
+	v2 "github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs/prometheus_client/v2"
 )
 
 var (

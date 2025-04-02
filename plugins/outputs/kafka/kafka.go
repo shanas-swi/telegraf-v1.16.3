@@ -9,11 +9,11 @@ import (
 
 	"github.com/Shopify/sarama"
 	"github.com/gofrs/uuid"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/common/kafka"
-	tlsint "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/common/kafka"
+	tlsint "github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
 )
 
 var ValidTopicSuffixMethods = []string{
@@ -225,7 +225,7 @@ var sampleConfig = `
   ## Data format to output.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md
+  ## https://github.com/shanas-swi/telegraf-v1.16.3/blob/master/docs/DATA_FORMATS_OUTPUT.md
   # data_format = "influx"
 `
 

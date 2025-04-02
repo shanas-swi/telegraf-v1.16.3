@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal/process"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal/process"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
 )
 
 const sampleConfig = `
@@ -24,7 +24,7 @@ const sampleConfig = `
   ## Data format to export.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md
+  ## https://github.com/shanas-swi/telegraf-v1.16.3/blob/master/docs/DATA_FORMATS_OUTPUT.md
   data_format = "influx"
 `
 

@@ -11,10 +11,10 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/influxdata/telegraf/internal"
-	itls "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/testutil"
 	"github.com/influxdata/toml"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	itls "github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/require"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/simulator"

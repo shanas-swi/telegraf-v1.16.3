@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers"
+	"github.com/shanas-swi/telegraf-v1.16.3/selfstat"
 )
 
 // UdpListener main struct for the collector
@@ -31,7 +31,7 @@ type UdpListener struct {
 	// UDPPacketSize is deprecated, it's only here for legacy support
 	// we now always create 1 max size buffer and then copy only what we need
 	// into the in channel
-	// see https://github.com/influxdata/telegraf/pull/992
+	// see https://github.com/shanas-swi/telegraf-v1.16.3/pull/992
 	UDPPacketSize int `toml:"udp_packet_size"`
 
 	sync.Mutex
@@ -71,7 +71,7 @@ var malformedwarn = "udp_listener has received %d malformed packets" +
 const sampleConfig = `
   # DEPRECATED: the TCP listener plugin has been deprecated in favor of the
   # socket_listener plugin
-  # see https://github.com/influxdata/telegraf/tree/master/plugins/inputs/socket_listener
+  # see https://github.com/shanas-swi/telegraf-v1.16.3/tree/master/plugins/inputs/socket_listener
 `
 
 func (u *UdpListener) SampleConfig() string {
@@ -98,7 +98,7 @@ func (u *UdpListener) Start(acc telegraf.Accumulator) error {
 
 	log.Println("W! DEPRECATED: the UDP listener plugin has been deprecated " +
 		"in favor of the socket_listener plugin " +
-		"(https://github.com/influxdata/telegraf/tree/master/plugins/inputs/socket_listener)")
+		"(https://github.com/shanas-swi/telegraf-v1.16.3/tree/master/plugins/inputs/socket_listener)")
 
 	tags := map[string]string{
 		"address": u.ServiceAddress,

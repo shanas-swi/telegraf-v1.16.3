@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/influxdata/telegraf/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

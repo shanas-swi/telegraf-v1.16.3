@@ -1,9 +1,10 @@
 package filestack
 
 import (
-	"github.com/influxdata/telegraf/testutil"
 	"net/http"
 	"net/http/httptest"
+
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 
 	"strings"
 	"testing"

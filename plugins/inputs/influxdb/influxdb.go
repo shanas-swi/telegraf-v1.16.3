@@ -9,10 +9,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 const (
@@ -147,11 +147,13 @@ type memstats struct {
 
 // Gathers data from a particular URL
 // Parameters:
-//     acc    : The telegraf Accumulator to use
-//     url    : endpoint to send request to
+//
+//	acc    : The telegraf Accumulator to use
+//	url    : endpoint to send request to
 //
 // Returns:
-//     error: Any error that may have occurred
+//
+//	error: Any error that may have occurred
 func (i *InfluxDB) gatherURL(
 	acc telegraf.Accumulator,
 	url string,

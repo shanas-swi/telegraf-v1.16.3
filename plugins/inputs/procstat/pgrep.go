@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
 )
 
 // Implementation of PIDGatherer that execs pgrep to find processes

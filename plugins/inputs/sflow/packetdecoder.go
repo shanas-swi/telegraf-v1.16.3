@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs/sflow/binaryio"
 	"github.com/pkg/errors"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/sflow/binaryio"
 )
 
 type PacketDecoder struct {

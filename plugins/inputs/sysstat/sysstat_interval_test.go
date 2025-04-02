@@ -1,5 +1,5 @@
-// +build !race
-// +build linux
+//go:build !race && linux
+// +build !race,linux
 
 package sysstat
 
@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 // TestInterval verifies that the correct interval is created. It is not

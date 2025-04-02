@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package conntrack
@@ -9,9 +10,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
 	"path/filepath"
+
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 type Conntrack struct {

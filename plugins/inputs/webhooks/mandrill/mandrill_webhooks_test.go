@@ -1,12 +1,13 @@
 package mandrill
 
 import (
-	"github.com/influxdata/telegraf/testutil"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
 	"strings"
 	"testing"
+
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 func postWebhooks(md *MandrillWebhook, eventBody string) *httptest.ResponseRecorder {

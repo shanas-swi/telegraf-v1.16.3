@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 package win_perf_counters
@@ -8,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 var sampleConfig = `
@@ -244,7 +245,7 @@ func (m *Win_PerfCounters) SampleConfig() string {
 	return sampleConfig
 }
 
-//objectName string, counter string, instance string, measurement string, include_total bool
+// objectName string, counter string, instance string, measurement string, include_total bool
 func (m *Win_PerfCounters) AddItem(counterPath string, objectName string, instance string, counterName string, measurement string, includeTotal bool) error {
 	var err error
 	var counterHandle PDH_HCOUNTER

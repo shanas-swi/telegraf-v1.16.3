@@ -7,11 +7,11 @@ import (
 	"net"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	tlsint "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	tlsint "github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
 )
 
 type SocketWriter struct {
@@ -66,7 +66,7 @@ func (sw *SocketWriter) SampleConfig() string {
   ## Data format to generate.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
+  ## https://github.com/shanas-swi/telegraf-v1.16.3/blob/master/docs/DATA_FORMATS_INPUT.md
   # data_format = "influx"
 `
 }

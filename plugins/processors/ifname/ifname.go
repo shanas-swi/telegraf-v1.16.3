@@ -6,13 +6,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/internal/snmp"
-	si "github.com/influxdata/telegraf/plugins/inputs/snmp"
-	"github.com/influxdata/telegraf/plugins/processors"
-	"github.com/influxdata/telegraf/plugins/processors/reverse_dns/parallel"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal/snmp"
+	si "github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/snmp"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/processors"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/processors/reverse_dns/parallel"
 )
 
 var sampleConfig = `

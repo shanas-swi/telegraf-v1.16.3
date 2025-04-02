@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
 )
 
 type v2Root struct {

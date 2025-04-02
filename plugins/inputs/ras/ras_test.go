@@ -1,3 +1,4 @@
+//go:build linux && (386 || amd64 || arm || arm64)
 // +build linux
 // +build 386 amd64 arm arm64
 
@@ -7,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 
 	"github.com/stretchr/testify/assert"
 )

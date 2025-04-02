@@ -15,17 +15,17 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/influxdata/telegraf/agent"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/internal/goplugin"
-	"github.com/influxdata/telegraf/logger"
-	_ "github.com/influxdata/telegraf/plugins/aggregators/all"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	_ "github.com/influxdata/telegraf/plugins/inputs/all"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	_ "github.com/influxdata/telegraf/plugins/outputs/all"
-	_ "github.com/influxdata/telegraf/plugins/processors/all"
+	"github.com/shanas-swi/telegraf-v1.16.3/agent"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal/goplugin"
+	"github.com/shanas-swi/telegraf-v1.16.3/logger"
+	_ "github.com/shanas-swi/telegraf-v1.16.3/plugins/aggregators/all"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
+	_ "github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/all"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	_ "github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs/all"
+	_ "github.com/shanas-swi/telegraf-v1.16.3/plugins/processors/all"
 )
 
 // If you update these, update usage.go and usage_windows.go

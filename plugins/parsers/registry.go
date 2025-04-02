@@ -3,19 +3,19 @@ package parsers
 import (
 	"fmt"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/parsers/collectd"
-	"github.com/influxdata/telegraf/plugins/parsers/csv"
-	"github.com/influxdata/telegraf/plugins/parsers/dropwizard"
-	"github.com/influxdata/telegraf/plugins/parsers/form_urlencoded"
-	"github.com/influxdata/telegraf/plugins/parsers/graphite"
-	"github.com/influxdata/telegraf/plugins/parsers/grok"
-	"github.com/influxdata/telegraf/plugins/parsers/influx"
-	"github.com/influxdata/telegraf/plugins/parsers/json"
-	"github.com/influxdata/telegraf/plugins/parsers/logfmt"
-	"github.com/influxdata/telegraf/plugins/parsers/nagios"
-	"github.com/influxdata/telegraf/plugins/parsers/value"
-	"github.com/influxdata/telegraf/plugins/parsers/wavefront"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/collectd"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/csv"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/dropwizard"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/form_urlencoded"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/graphite"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/grok"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/influx"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/json"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/logfmt"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/nagios"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/value"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/wavefront"
 )
 
 type ParserFunc func() (Parser, error)

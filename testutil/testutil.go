@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
 )
 
 var localhost = "localhost"
@@ -42,10 +42,11 @@ func MockMetrics() []telegraf.Metric {
 }
 
 // TestMetric Returns a simple test point:
-//     measurement -> "test1" or name
-//     tags -> "tag1":"value1"
-//     value -> value
-//     time -> time.Date(2009, time.November, 10, 23, 0, 0, 0, time.UTC)
+//
+//	measurement -> "test1" or name
+//	tags -> "tag1":"value1"
+//	value -> value
+//	time -> time.Date(2009, time.November, 10, 23, 0, 0, 0, time.UTC)
 func TestMetric(value interface{}, name ...string) telegraf.Metric {
 	if value == nil {
 		panic("Cannot use a nil value")

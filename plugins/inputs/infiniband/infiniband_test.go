@@ -1,11 +1,13 @@
+//go:build linux
 // +build linux
 
 package infiniband
 
 import (
-	"github.com/Mellanox/rdmamap"
-	"github.com/influxdata/telegraf/testutil"
 	"testing"
+
+	"github.com/Mellanox/rdmamap"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 func TestInfiniband(t *testing.T) {

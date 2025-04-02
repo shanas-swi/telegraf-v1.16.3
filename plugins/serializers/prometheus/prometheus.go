@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"time"
 
-	"github.com/influxdata/telegraf"
 	"github.com/prometheus/common/expfmt"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 // TimestampExport controls if the output contains timestamps.

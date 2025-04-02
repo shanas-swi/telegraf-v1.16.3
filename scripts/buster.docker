@@ -1,7 +1,7 @@
 FROM golang:1.15.2-buster as builder
-WORKDIR /go/src/github.com/influxdata/telegraf
+WORKDIR /go/src/github.com/shanas-swi/telegraf-v1.16.3
 
-COPY . /go/src/github.com/influxdata/telegraf
+COPY . /go/src/github.com/shanas-swi/telegraf-v1.16.3
 RUN make go-install
 
 FROM buildpack-deps:buster-curl

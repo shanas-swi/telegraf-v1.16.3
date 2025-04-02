@@ -18,17 +18,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/models"
-	"github.com/influxdata/telegraf/plugins/aggregators"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/plugins/processors"
-	"github.com/influxdata/telegraf/plugins/serializers"
 	"github.com/influxdata/toml"
 	"github.com/influxdata/toml/ast"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/models"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/aggregators"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/processors"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
 )
 
 var (
@@ -667,10 +667,9 @@ func (c *Config) LoadDirectory(path string) error {
 }
 
 // Try to find a default config file at these locations (in order):
-//   1. $TELEGRAF_CONFIG_PATH
-//   2. $HOME/.telegraf/telegraf.conf
-//   3. /etc/telegraf/telegraf.conf
-//
+//  1. $TELEGRAF_CONFIG_PATH
+//  2. $HOME/.telegraf/telegraf.conf
+//  3. /etc/telegraf/telegraf.conf
 func getDefaultConfigPath() (string, error) {
 	envfile := os.Getenv("TELEGRAF_CONFIG_PATH")
 	homefile := os.ExpandEnv("${HOME}/.telegraf/telegraf.conf")
@@ -850,7 +849,7 @@ func (c *Config) LoadConfigData(data []byte) error {
 
 // trimBOM trims the Byte-Order-Marks from the beginning of the file.
 // this is for Windows compatibility only.
-// see https://github.com/influxdata/telegraf/issues/1378
+// see https://github.com/shanas-swi/telegraf-v1.16.3/issues/1378
 func trimBOM(f []byte) []byte {
 	return bytes.TrimPrefix(f, []byte("\xef\xbb\xbf"))
 }

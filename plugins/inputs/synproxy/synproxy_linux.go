@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package synproxy
@@ -9,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 func (k *Synproxy) Gather(acc telegraf.Accumulator) error {

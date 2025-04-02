@@ -10,7 +10,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -279,8 +279,8 @@ func TestPhpFpmGeneratesMetrics_From_Socket_Custom_Status_Path(t *testing.T) {
 	acc.AssertContainsTaggedFields(t, "phpfpm", fields, tags)
 }
 
-//When not passing server config, we default to localhost
-//We just want to make sure we did request stat from localhost
+// When not passing server config, we default to localhost
+// We just want to make sure we did request stat from localhost
 func TestPhpFpmDefaultGetFromLocalhost(t *testing.T) {
 	r := &phpfpm{}
 

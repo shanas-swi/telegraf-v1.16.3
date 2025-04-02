@@ -6,7 +6,7 @@ import (
 
 	v1beta1EXT "github.com/ericchiang/k8s/apis/extensions/v1beta1"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 func collectIngress(ctx context.Context, acc telegraf.Accumulator, ki *KubernetesInventory) {

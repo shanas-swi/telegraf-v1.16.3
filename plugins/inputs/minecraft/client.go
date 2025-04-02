@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf/plugins/inputs/minecraft/internal/rcon"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/minecraft/internal/rcon"
 )
 
 var (

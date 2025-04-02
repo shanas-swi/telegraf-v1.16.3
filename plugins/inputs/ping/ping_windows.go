@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 package ping
@@ -9,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf"
+	"github.com/shanas-swi/telegraf-v1.16.3"
 )
 
 func (p *Ping) pingToURL(u string, acc telegraf.Accumulator) {

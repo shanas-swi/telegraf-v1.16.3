@@ -4,7 +4,6 @@ Lustre 2.x telegraf plugin
 Lustre (http://lustre.org/) is an open-source, parallel file system
 for HPC environments. It stores statistics about its activity in
 /proc
-
 */
 package lustre2
 
@@ -14,8 +13,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 type tags struct {
@@ -47,9 +46,12 @@ var sampleConfig = `
   # ]
 `
 
-/* The wanted fields would be a []string if not for the
+/*
+	The wanted fields would be a []string if not for the
+
 lines that start with read_bytes/write_bytes and contain
-   both the byte count and the function call count
+
+	both the byte count and the function call count
 */
 type mapping struct {
 	inProc   string // What to look for at the start of a line in /proc/fs/lustre/*

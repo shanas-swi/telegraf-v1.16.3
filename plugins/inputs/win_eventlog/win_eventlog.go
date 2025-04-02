@@ -1,7 +1,9 @@
-//+build windows
+//go:build windows
+// +build windows
 
-//revive:disable-next-line:var-naming
 // Package win_eventlog Input plugin to collect Windows Event Log messages
+//
+//revive:disable-next-line:var-naming
 package win_eventlog
 
 import (
@@ -15,8 +17,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 	"golang.org/x/sys/windows"
 )
 

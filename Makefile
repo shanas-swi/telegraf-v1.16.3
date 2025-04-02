@@ -259,7 +259,7 @@ $(rpms):
 		--input-type dir \
 		--output-type rpm \
 		--vendor InfluxData \
-		--url https://github.com/influxdata/telegraf \
+		--url https://github.com/shanas-swi/telegraf-v1.16.3 \
 		--license MIT \
 		--maintainer support@influxdb.com \
 		--config-files /etc/telegraf/telegraf.conf \
@@ -297,7 +297,7 @@ $(debs):
 		--input-type dir \
 		--output-type deb \
 		--vendor InfluxData \
-		--url https://github.com/influxdata/telegraf \
+		--url https://github.com/shanas-swi/telegraf-v1.16.3 \
 		--license MIT \
 		--maintainer support@influxdb.com \
 		--config-files /etc/telegraf/telegraf.conf.sample \

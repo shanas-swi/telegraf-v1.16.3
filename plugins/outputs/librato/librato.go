@@ -9,10 +9,10 @@ import (
 	"net/http"
 	"regexp"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers/graphite"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/graphite"
 )
 
 // Librato structure for configuration and client
@@ -43,7 +43,7 @@ var sampleConfig = `
   ## Connection timeout.
   # timeout = "5s"
   ## Output source Template (same as graphite buckets)
-  ## see https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md#graphite
+  ## see https://github.com/shanas-swi/telegraf-v1.16.3/blob/master/docs/DATA_FORMATS_OUTPUT.md#graphite
   ## This template is used in librato's source (not metric's name)
   template = "host"
 
@@ -251,7 +251,7 @@ func (g *Gauge) setValue(v interface{}) error {
 	return nil
 }
 
-//Close is used to close the connection to librato Output
+// Close is used to close the connection to librato Output
 func (l *Librato) Close() error {
 	return nil
 }

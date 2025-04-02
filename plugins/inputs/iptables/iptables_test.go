@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package iptables
@@ -7,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 func TestIptables_Gather(t *testing.T) {

@@ -9,11 +9,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/filter"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 // Kubernetes represents the config object for the plugin
@@ -78,12 +78,12 @@ func init() {
 	})
 }
 
-//SampleConfig returns a sample config
+// SampleConfig returns a sample config
 func (k *Kubernetes) SampleConfig() string {
 	return sampleConfig
 }
 
-//Description returns the description of this plugin
+// Description returns the description of this plugin
 func (k *Kubernetes) Description() string {
 	return "Read metrics from the kubernetes kubelet api"
 }
@@ -112,7 +112,7 @@ func (k *Kubernetes) Init() error {
 	return nil
 }
 
-//Gather collects kubernetes metrics from a given URL
+// Gather collects kubernetes metrics from a given URL
 func (k *Kubernetes) Gather(acc telegraf.Accumulator) error {
 	acc.AddError(k.gatherSummary(k.URL, acc))
 	return nil

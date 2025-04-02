@@ -2,7 +2,6 @@ package timestream_test
 
 import (
 	"fmt"
-	"github.com/aws/aws-sdk-go/aws/awserr"
 	"reflect"
 	"sort"
 	"strconv"
@@ -10,12 +9,14 @@ import (
 	"testing"
 	"time"
 
+	"github.com/aws/aws-sdk-go/aws/awserr"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/timestreamwrite"
-	"github.com/influxdata/telegraf"
-	internalaws "github.com/influxdata/telegraf/config/aws"
-	ts "github.com/influxdata/telegraf/plugins/outputs/timestream"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	internalaws "github.com/shanas-swi/telegraf-v1.16.3/config/aws"
+	ts "github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs/timestream"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 
 	"github.com/stretchr/testify/assert"
 )

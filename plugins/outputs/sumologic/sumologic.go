@@ -10,14 +10,14 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/plugins/serializers/carbon2"
-	"github.com/influxdata/telegraf/plugins/serializers/graphite"
-	"github.com/influxdata/telegraf/plugins/serializers/prometheus"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/config"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/carbon2"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/graphite"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/serializers/prometheus"
 )
 
 const (

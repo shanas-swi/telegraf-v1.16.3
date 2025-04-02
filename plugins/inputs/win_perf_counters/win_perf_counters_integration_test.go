@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 package win_perf_counters
@@ -8,10 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/testutil"
+	"strings"
+
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"strings"
 )
 
 func TestWinPerformanceQueryImpl(t *testing.T) {

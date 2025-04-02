@@ -14,13 +14,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/metric"
-	internaltls "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	jsonparser "github.com/influxdata/telegraf/plugins/parsers/json"
 	"github.com/openconfig/gnmi/proto/gnmi"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
+	internaltls "github.com/shanas-swi/telegraf-v1.16.3/plugins/common/tls"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
+	jsonparser "github.com/shanas-swi/telegraf-v1.16.3/plugins/parsers/json"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
@@ -411,7 +411,7 @@ func (c *GNMI) handlePath(path *gnmi.Path, tags map[string]string, prefix string
 	return builder.String(), aliasPath
 }
 
-//ParsePath from XPath-like string to gNMI path structure
+// ParsePath from XPath-like string to gNMI path structure
 func parsePath(origin string, path string, target string) (*gnmi.Path, error) {
 	var err error
 	gnmiPath := gnmi.Path{Origin: origin, Target: target}

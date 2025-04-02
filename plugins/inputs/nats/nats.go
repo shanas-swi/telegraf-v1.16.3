@@ -1,3 +1,4 @@
+//go:build !freebsd || (freebsd && cgo)
 // +build !freebsd freebsd,cgo
 
 package nats
@@ -10,10 +11,10 @@ import (
 	"path"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
 	gnatsd "github.com/nats-io/nats-server/v2/server"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 type Nats struct {

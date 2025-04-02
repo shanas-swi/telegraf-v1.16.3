@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/metric"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/filter"
+	"github.com/shanas-swi/telegraf-v1.16.3/internal"
+	"github.com/shanas-swi/telegraf-v1.16.3/metric"
 	"github.com/tidwall/gjson"
 )
 
@@ -145,10 +145,10 @@ func (p *Parser) parseObject(data map[string]interface{}, timestamp time.Time) (
 	return []telegraf.Metric{metric}, nil
 }
 
-//will take in field map with strings and bools,
-//search for TagKeys that match fieldnames and add them to tags
-//will delete any strings/bools that shouldn't be fields
-//assumes that any non-numeric values in TagKeys should be displayed as tags
+// will take in field map with strings and bools,
+// search for TagKeys that match fieldnames and add them to tags
+// will delete any strings/bools that shouldn't be fields
+// assumes that any non-numeric values in TagKeys should be displayed as tags
 func (p *Parser) switchFieldToTag(tags map[string]string, fields map[string]interface{}) (map[string]string, map[string]interface{}) {
 	for _, name := range p.tagKeys {
 		//switch any fields in tagkeys into tags

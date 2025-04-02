@@ -1,3 +1,4 @@
+//go:build linux && (386 || amd64 || arm || arm64)
 // +build linux
 // +build 386 amd64 arm arm64
 
@@ -13,8 +14,8 @@ import (
 
 	_ "modernc.org/sqlite" //to register SQLite driver
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/shanas-swi/telegraf-v1.16.3"
+	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
 )
 
 // Ras plugin gathers and counts errors provided by RASDaemon

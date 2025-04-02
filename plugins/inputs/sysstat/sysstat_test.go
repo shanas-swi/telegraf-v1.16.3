@@ -1,3 +1,4 @@
+//go:build linux
 // +build linux
 
 package sysstat
@@ -9,7 +10,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 
 var s = Sysstat{
