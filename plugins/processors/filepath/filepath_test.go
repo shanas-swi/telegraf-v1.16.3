@@ -6,8 +6,8 @@ package filepath
 import (
 	"testing"
 	"time"
-github.com/shanas-swi/telegraf-v1.16.3
-	"github.com/shanas-swi/telegraf-v1.16.3-v1.16.3"
+
+	"github.com/shanas-swi/telegraf-v1.16.3"
 	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 )
 

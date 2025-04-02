@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/system"
-	"github.com/shanas-swi/telegraf-v1.16.3-v1.16.3/testutil"
+	"github.com/shanas-swi/telegraf-v1.16.3/testutil"
 	"github.com/shirou/gopsutil/disk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

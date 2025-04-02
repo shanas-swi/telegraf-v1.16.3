@@ -6,7 +6,7 @@ import (
 
 	"github.com/shanas-swi/telegraf-v1.16.3/config"
 	_ "github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs/all"
-	_ "github.com/shanas-swi/telegraf-v1.16.3-v1.16.3/plugins/outputs/all"
+	_ "github.com/shanas-swi/telegraf-v1.16.3/plugins/outputs/all"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
