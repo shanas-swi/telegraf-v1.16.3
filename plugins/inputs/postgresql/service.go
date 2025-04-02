@@ -9,9 +9,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/jackc/pgtype"
-	"github.com/jackc/pgx/v4"
-	"github.com/jackc/pgx/v4/stdlib"
+	"github.com/jackc/pgx"
+	"github.com/jackc/pgx/pgtype"
+	"github.com/jackc/pgx/stdlib"
 
 	"github.com/shanas-swi/telegraf-v1.16.3"
 	"github.com/shanas-swi/telegraf-v1.16.3/internal"

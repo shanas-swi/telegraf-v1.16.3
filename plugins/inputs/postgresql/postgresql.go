@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	// register in driver.
-	_ "github.com/jackc/pgx/v4/stdlib"
+	_ "github.com/jackc/pgx/stdlib"
 
 	"github.com/shanas-swi/telegraf-v1.16.3"
 	"github.com/shanas-swi/telegraf-v1.16.3/internal"

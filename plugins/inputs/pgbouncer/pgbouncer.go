@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"strconv"
 
-	_ "github.com/jackc/pgx/v4/stdlib" // register driver
+	_ "github.com/jackc/pgx/stdlib" // register driver
 	"github.com/shanas-swi/telegraf-v1.16.3"
 	"github.com/shanas-swi/telegraf-v1.16.3/internal"
 	"github.com/shanas-swi/telegraf-v1.16.3/plugins/inputs"
