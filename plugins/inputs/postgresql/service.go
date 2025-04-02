@@ -1,6 +1,7 @@
 package postgresql
 
 import (
+	"context"
 	"database/sql"
 	"fmt"
 	"net"
@@ -9,9 +10,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/jackc/pgx"
-	"github.com/jackc/pgx/pgtype"
-	"github.com/jackc/pgx/stdlib"
+	"github.com/jackc/pgtype"
+	"github.com/jackc/pgx/v4"
+	"github.com/jackc/pgx/v4/stdlib"
 
 	"github.com/shanas-swi/telegraf-v1.16.3"
 	"github.com/shanas-swi/telegraf-v1.16.3/internal"
@@ -108,39 +109,43 @@ func (p *Service) Start(telegraf.Accumulator) (err error) {
 	connectionString := p.Address
 
 	// Specific support to make it work with PgBouncer too
-	// See https://github.com/shanas-swi/telegraf-v1.16.3/issues/3253#issuecomment-357505343
 	if p.IsPgBouncer {
-		d := &stdlib.DriverConfig{
-			ConnConfig: pgx.ConnConfig{
-				PreferSimpleProtocol: true,
-				RuntimeParams: map[string]string{
-					"client_encoding": "UTF8",
-				},
-				CustomConnInfo: func(c *pgx.Conn) (*pgtype.ConnInfo, error) {
-					info := c.ConnInfo.DeepCopy()
-					info.RegisterDataType(pgtype.DataType{
-						Value: &pgtype.OIDValue{},
-						Name:  "int8OID",
-						OID:   pgtype.Int8OID,
-					})
-					// Newer versions of pgbouncer need this defined. See the discussion here:
-					// https://github.com/jackc/pgx/issues/649
-					info.RegisterDataType(pgtype.DataType{
-						Value: &pgtype.OIDValue{},
-						Name:  "numericOID",
-						OID:   pgtype.NumericOID,
-					})
-
-					return info, nil
-				},
-			},
+		config, err := pgx.ParseConfig(p.Address)
+		if err != nil {
+			return fmt.Errorf("parsing PgBouncer connection string: %v", err)
 		}
-		stdlib.RegisterDriverConfig(d)
-		connectionString = d.ConnectionString(p.Address)
-	}
+		config.PreferSimpleProtocol = true
+		config.RuntimeParams = map[string]string{
+			"client_encoding": "UTF8",
+		}
 
-	if p.DB, err = sql.Open("pgx", connectionString); err != nil {
-		return err
+		// Create a temporary connection to register custom types
+		conn, err := pgx.ConnectConfig(context.Background(), config)
+		if err != nil {
+			return fmt.Errorf("temporary connection for type registration failed: %v", err)
+		}
+		defer conn.Close(context.Background())
+
+		// Get the ConnInfo and register custom OID types
+		connInfo := conn.ConnInfo()
+		connInfo.RegisterDataType(pgtype.DataType{
+			Value: &pgtype.OIDValue{},
+			Name:  "int8OID",
+			OID:   pgtype.Int8OID,
+		})
+		connInfo.RegisterDataType(pgtype.DataType{
+			Value: &pgtype.OIDValue{},
+			Name:  "numericOID",
+			OID:   pgtype.NumericOID,
+		})
+
+		// Open the sql.DB with the updated config
+		p.DB = stdlib.OpenDB(*config)
+	} else {
+		p.DB, err = sql.Open("pgx", connectionString)
+		if err != nil {
+			return err
+		}
 	}
 
 	p.DB.SetMaxOpenConns(p.MaxOpen)
