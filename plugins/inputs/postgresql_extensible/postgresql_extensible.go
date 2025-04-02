@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	_ "github.com/jackc/pgx/stdlib"
+	_ "github.com/jackc/pgx/v4/stdlib"
 
 	"github.com/shanas-swi/telegraf-v1.16.3"
 	"github.com/shanas-swi/telegraf-v1.16.3/internal"
